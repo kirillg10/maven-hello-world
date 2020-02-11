@@ -9,6 +9,11 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+variables:
+  containerRegistryServiceConnection: saban17-testing
+  imageRepository: saban17/testing-helloworld
+  tag: 1.0.0
+
 steps:
 - task: Maven@3
   inputs:
