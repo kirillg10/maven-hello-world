@@ -43,7 +43,3 @@ steps:
       containerRegistry: $(containerRegistryServiceConnection)
       repository: $(imageRepository)
       tags: $(tag)
-
-container:
-  image: kirillg10/my-app    
-  
