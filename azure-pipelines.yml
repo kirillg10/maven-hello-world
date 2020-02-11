@@ -42,4 +42,4 @@ steps:
       command: push
       containerRegistry: $(containerRegistryServiceConnection)
       repository: $(imageRepository)
-      tags: "$(tag)\n"
+      tags: $(tag)
