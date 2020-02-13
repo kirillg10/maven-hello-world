@@ -20,7 +20,7 @@ steps:
       mavenOptions: "-Xmx3072m"
       mavenPomFile: my-app/pom.xml
       publishJUnitResults: true
-      testResultsFiles: "**/surefire-reports/TEST-*.xml"
+      testResultsFiles: "**/my-app/TEST-*.xml"
 
   - task: Docker@2
     displayName: dockerLogin
