@@ -13,17 +13,6 @@
       <annotatedJdk>${org.checkerframework:jdk8:jar}</annotatedJdk>
   </properties>
   
-  <repository>
-  <id>kirillg10</id>
-  <url>https://pkgs.dev.azure.com/kirillg10/_packaging/kirillg10/maven/v1</url>
-  <releases>
-    <enabled>true</enabled>
-  </releases>
-  <snapshots>
-    <enabled>true</enabled>
-  </snapshots>
-</repository>
-
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
