@@ -28,7 +28,7 @@ steps:
       javaHomeOption: JDKVersion
       jdkArchitectureOption: x64
       jdkVersionOption: "1.8"
-      mavenOptions: "-Xmx3072m"
+      mavenOptions: "-Xmx3072m -Drevision=$(tag)-SNAPSHOT"
       mavenPomFile: my-app/pom.xml
       publishJUnitResults: true
       testResultsFiles: "**/my-app/TEST-*.xml"
