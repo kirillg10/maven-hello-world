@@ -13,7 +13,7 @@ variables:
 steps: 
   - task: Maven@3
     inputs: 
-      goals: package
+      goals: deploy
       javaHomeOption: JDKVersion
       jdkArchitectureOption: x64
       jdkVersionOption: "1.8"
