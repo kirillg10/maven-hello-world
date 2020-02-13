@@ -19,8 +19,8 @@ steps:
       secureFile: 'settings.xml' # The file name or GUID of the secure file
   
   - script: |
-      New-Item -Type Directory -Force "${HOME}/.m2"
-      Copy-Item -Force "$(settingsxml.secureFilePath)" "${HOME}/.m2/settings.xml"
+      mkdir "${HOME}/.m2"
+      cp -r "$(settingsxml.secureFilePath)" "${HOME}/.m2/settings.xml"
 
   - task: Maven@3
     inputs: 
