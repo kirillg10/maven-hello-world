@@ -10,7 +10,18 @@ variables:
   imageRepository: kirillg10/my-app
   tag: "1.0.0"
   
-steps: 
+steps:
+# Download secure file
+# Download a secure file to the agent machine
+  - task: DownloadSecureFile@1
+    name: 'settingsxml' # The name with which to reference the secure file's path on the agent, like $(mySecureFile.secureFilePath)
+    inputs:
+      secureFile: 'settings.xml' # The file name or GUID of the secure file
+  
+  - script: |
+      New-Item -Type Directory -Force "${HOME}/.m2"
+      Copy-Item -Force "$(settingsxml.secureFilePath)" "${HOME}/.m2/settings.xml"
+
   - task: Maven@3
     inputs: 
       goals: deploy
